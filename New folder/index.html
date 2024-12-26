@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top News</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #005f73;
+            color: white;
+            padding: 15px 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-radius: 5px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        nav {
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #0a9396;
+        }
+
+        #live-one {
+            background-color: #e0f7fa;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #live-one h3 {
+            color: #d32f2f;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        #live-one img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        #live-one p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .news-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .news-grid-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .news-grid-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .news-grid-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .news-grid-item h2 {
+            font-size: 1.4rem;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .news-grid-item p {
+            font-size: 1rem;
+            color: #777;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #005f73;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .news-grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            #live-one {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Top News</h1>
+        <nav>
+            <ul class="nav-links">
+                <a href="#live">Live</a>
+                <a href="#home">Home</a>
+                <a href="#sport">Sport</a>
+                <a href="#contact">Contact</a>
+                <a href="#entertainment">Entertainment</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div id="live-one">
+            <h3>Live - Aus scored 311-6 stumps</h3>
+            <img src="img/th.jfif" alt="Live News Image">
+            <p>Australia walk away with the honors. Sam Konstas, on debut, set the tone for them and the rest followed suit. The youngster brought a fearless approach at the top of the order and that paid off...</p>
+        </div>
+
+        <section class="news-grid-container">
+            <article class="news-grid-item">
+                <h2>Kohli & debutant Konstas in 'spicy' altercation after shoulder barge</h2>
+                <img src="img/virat.jfif" alt="Kohli Altercation">
+                <p>Watch as India's Virat Kohli and Australian debutant Sam Konstas engage in a "spicy" altercation after bumping shoulders on the first day of the fourth Test at the MCG, Melbourne.</p>
+            </article>
+
+            <article class="news-grid-item">
+                <h2>Dozens survive Kazakhstan passenger plane crash</h2>
+                <img src="img/crash.webp" alt="Plane Crash">
+                <p>When the earthquake struck at 06:30 (01:00 GMT), I was on a ferry, headed towards Havelock – an island in the Indian archipelago of Andaman and Nicobar.</p>
+            </article>
+
+            <article class="news-grid-item">
+                <h2>Zelensky condemns 'inhumane' Christmas Day attack</h2>
+                <img src="img/z.webp" alt="Zelensky Christmas Attack">
+                <p>Ukrainian President Volodymyr Zelensky says Russia made a "conscious choice" by launching a major overnight attack on his country's energy infrastructure on Christmas Day.</p>
+            </article>
+
+            <article class="news-grid-item">
+                <h2>Bald eagle officially declared US national bird after 250 years</h2>
+                <img src="img/egl.webp" alt="Bald Eagle">
+                <p>The bald eagle is now officially the national bird of the US, after President Joe Biden signed a law on Christmas Eve bestowing the honour upon the white-headed and yellow-beaked bird of prey.</p>
+            </article>
+
+            <article class="news-grid-item">
+                <h2>Assad loyalists kill 14 in clash with Syria's new ruling forces</h2>
+                <img src="img/sliper.webp" alt="Syria Clash">
+                <p>Syria's new rebel-led authorities say supporters of ousted President Bashar al-Assad have killed 14 interior ministry troops in an "ambush" in the west of the country.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Top News. All rights reserved. | Privacy Policy</p>
+    </footer>
+
+</body>
+</html>
